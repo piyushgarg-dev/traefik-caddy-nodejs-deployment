@@ -16,12 +16,12 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
     labels:
       - 'traefik.enable=true'
-      - "traefik.http.routers.my-router.rule=Host(`piyushgarg.online`)
-      - "traefik.http.services.my-router.loadbalancer.server.port=80"
-      - "traefik.http.routers.my-router.entrypoints=websecure"
-      - "traefik.docker.network=project-a-network"
-      - "traefik.http.routers.my-router.tls=true"
-      - "traefik.http.routers.my-router.tls.certresolver=cert-resolver"
+      - 'traefik.http.routers.my-router.rule=Host(`piyushgarg.online`)'
+      - 'traefik.http.services.my-router.loadbalancer.server.port=80'
+      - 'traefik.http.routers.my-router.entrypoints=websecure'
+      - 'traefik.docker.network=project-a-network'
+      - 'traefik.http.routers.my-router.tls=true'
+      - 'traefik.http.routers.my-router.tls.certresolver=cert-resolver'
     networks:
       - project-a-network
       - internal
