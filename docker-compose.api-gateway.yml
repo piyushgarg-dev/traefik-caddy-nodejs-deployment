@@ -34,9 +34,12 @@ services:
     networks:
       - traefik
       - project-a-network
+      - traefik-dozzle
 
 networks:
   traefik:
     name: traefik
   project-a-network:
     name: project-a-network
+  traefik-dozzle:
+    name: traefik-dozzle
